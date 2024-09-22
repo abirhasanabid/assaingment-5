@@ -25,7 +25,8 @@
                     },
                     fontFamily: {
                         lexend: 'Lexend'
-                    }
+                    },
+
                 }
             }
         }
@@ -34,17 +35,18 @@
 </head>
 
 <body class="font-lexend">
-    <header class="bg-headerColor">
+    <header class="bg-headerColor md:pt-6 md:pb-10 sm:mb-10 md:mb-14 lg:mb-20">
         <!-- navber -->
         <div class="navbar container mx-auto">
             <div class="navbar-start">
                 <a class="btn bg-btnColor text-hColor font-semibold text-xl">Button</a>
-              
+
             </div>
             <div class="navbar-center hidden lg:flex">
-               <h1 class="flex items-center gap-3 text-hColor font-semibold text-xl">
-                <img src="./assets/logo.png" alt="">
-                Donate Bangladesh</h1>
+                <h1 class="flex items-center gap-3 text-hColor font-semibold text-xl">
+                    <img src="./assets/logo.png" alt="">
+                    Donate Bangladesh
+                </h1>
             </div>
             <div class="navbar-end">
                 <a class="btn btn-ghost text-xl">
@@ -55,8 +57,89 @@
         </div>
     </header>
     <main>
-
+        <section>
+            <!-- btn div -->
+            <div class="flex justify-center gap-4 mt-5">
+                <button class="btn bg-btnColor text-hColor sm:text-xs md:text-xl font-semibold">Donation</button>
+                <button class="btn">History</button>
+            </div>
+        </section>
+        <!-- card section start -->
+        <section class="container mx-auto mt-6 space-y-8 sm:mb-10 md:mb-14 lg:mb-20">
+            <!-- card-1 -->
+            <div class="card lg:card-side bg-base-100 shadow-sm p-8 border-2 border-gray-200">
+                <figure class="w-3/4">
+                    <img src="./assets/noakhali.png" alt="Album" />
+                </figure>
+                <div class="card-body">
+                    <!-- <div class="flex gap-2">
+                    <img src="./assets/coin.png" alt="">
+                    <p>0 BDT</p>
+                </div> -->
+                    <button class="btn bg-gray-200 w-[120px] inline-flex">
+                        <img src="./assets/coin.png" alt="">
+                        <p class="text-pColor">0 BDT</p>
+                    </button>
+                    <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+                    <p class="text-pColor"> The recent floods in Noakhali have caused significant damage to homes
+                        infrastructure. Your donation will help provide essential supplies and to those affected by this
+                        disaster. Every contribution, big or small, makes difference. Please join us in supporting the
+                        relief efforts and making a positive impact on the lives of those in need.</p>
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <button class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate Now</button>
+                </div>
+            </div>
+            <!-- card-2 -->
+            <div class="card lg:card-side bg-base-100 shadow-sm p-8 border-2 border-gray-200">
+                <figure class="w-3/4">
+                    <img src="./assets/feni.png" alt="Album" />
+                </figure>
+                <div class="card-body">
+                    <!-- <div class="flex gap-2">
+                    <img src="./assets/coin.png" alt="">
+                    <p>0 BDT</p>
+                </div> -->
+                    <button class="btn bg-gray-200 w-[120px] inline-flex">
+                        <img src="./assets/coin.png" alt="">
+                        <p class="text-pColor">0 BDT</p>
+                    </button>
+                    <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
+                    <p class="text-pColor"> The recent floods in Noakhali have caused significant damage to homes
+                        infrastructure. Your donation will help provide essential supplies and to those affected by this
+                        disaster. Every contribution, big or small, makes difference. Please join us in supporting the
+                        relief efforts and making a positive impact on the lives of those in need.</p>
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <button class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate Now</button>
+                </div>
+            </div>
+            <!-- card-3 -->
+            <div class="card lg:card-side bg-base-100 shadow-sm p-8 border-2 border-gray-200">
+                <figure class="w-3/4">
+                    <img src="./assets/quota-protest.png" alt="Album" />
+                </figure>
+                <div class="card-body">
+                    <!-- <div class="flex gap-2">
+                    <img src="./assets/coin.png" alt="">
+                    <p>0 BDT</p>
+                </div> -->
+                    <button class="btn bg-gray-200 w-[120px] inline-flex">
+                        <img src="./assets/coin.png" alt="">
+                        <p class="text-pColor">0 BDT</p>
+                    </button>
+                    <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+                    <p class="text-pColor"> The recent floods in Noakhali have caused significant damage to homes
+                        infrastructure. Your donation will help provide essential supplies and to those affected by this
+                        disaster. Every contribution, big or small, makes difference. Please join us in supporting the
+                        relief efforts and making a positive impact on the lives of those in need.</p>
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <button class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate Now</button>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="bg-headerColor sm:h-12 md:h-20">
+    </footer>
 
     <script src="./web.js"></script>
 </body>
