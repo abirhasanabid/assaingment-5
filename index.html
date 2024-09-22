@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,51 @@
     <!-- daisy and tailwind link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    </style>
+    <!-- common style with tailwind cdn -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        btnColor: '#B9F76D',
+                        pColor: '#111111B3',
+                        hColor: '#111111',
+                        headerColor: '#F9F7F3'
+                    },
+                    fontFamily: {
+                        lexend: 'Lexend'
+                    }
+                }
+            }
+        }
+    </script>
 
 </head>
-<body>
-    <header>
 
+<body class="font-lexend">
+    <header class="bg-headerColor">
+        <!-- navber -->
+        <div class="navbar container mx-auto">
+            <div class="navbar-start">
+                <a class="btn bg-btnColor text-hColor font-semibold text-xl">Button</a>
+              
+            </div>
+            <div class="navbar-center hidden lg:flex">
+               <h1 class="flex items-center gap-3 text-hColor font-semibold text-xl">
+                <img src="./assets/logo.png" alt="">
+                Donate Bangladesh</h1>
+            </div>
+            <div class="navbar-end">
+                <a class="btn btn-ghost text-xl">
+                    <img src="./assets/coin.png" alt="">
+                    <p class="text-pColor font-medium text-xl">5500 BDT</p>
+                </a>
+            </div>
+        </div>
     </header>
     <main>
 
@@ -19,4 +60,5 @@
 
     <script src="./web.js"></script>
 </body>
+
 </html>
