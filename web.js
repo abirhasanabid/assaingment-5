@@ -14,7 +14,7 @@ document.getElementById('history-tab').addEventListener('click', function () {
     // history card
     const historyCard = getAtributeById('history-section');
     historyCard.remove('hidden');
-    
+
 })
 
 // donation tab btn
@@ -34,7 +34,7 @@ document.getElementById('donation-tab').addEventListener('click', function () {
 
 });
 
-// submit donate btn
+// submit donate btn {btn-1}
 document.getElementById('donate-now1').addEventListener('click', function () {
     const costAmmount = parseFloat(getInputValueById('donate-input-one'));
     const mainBalance = parseFloat(getInnerTextById('main-balance'));
@@ -57,9 +57,38 @@ document.getElementById('donate-now1').addEventListener('click', function () {
         <p class='text-pColor'>Date : ${new Date()}
         `;
         historySection.insertBefore(div, historySection.firstChild);
-        
+
     } else {
         alert('Invalid Donation Ammount');
 
     }
-}) 
+});
+
+// btn-2
+document.getElementById('donate-now2')
+    .addEventListener('click', function () {
+        const costAmmount = getInputValueById('card2-input');
+        const mainBalance = parseFloat(getInnerTextById('main-balance'));
+
+        if (typeof costAmmount === 'number' && costAmmount > 0 && costAmmount < mainBalance) {
+            const balance = mainBalance - costAmmount;
+            document.getElementById('main-balance').innerText = balance;
+            document.getElementById('donated-amount').innerText = costAmmount;
+
+            // history card
+            const historySection = gettingElementById('history-section');
+            const div = document.createElement('div');
+            div.className = 'border-2 border-gray-100 rounded-lg shadow-lg p-5 space-y-3';
+
+            div.innerHTML = `
+        <p class='text-xl font-semibold text-hColor'>${costAmmount} Donate for Flood Relief in Feni,Bangladesh</p>
+        <p class='text-pColor'>Date : ${new Date()}
+        `;
+            historySection.insertBefore(div, historySection.firstChild);
+        } else {
+            alert('Invalid Donation Ammount');
+
+        }
+    });
+    
+// btn-3

@@ -13,12 +13,12 @@ function getAtributeById(id) {
 
 // innerText
 function getInnerTextById(id) {
-   const tags = document.getElementById(id).innerText
+   const tags = parseFloat(document.getElementById(id).innerText);
    return tags;
 }
 
 // input Value
 function getInputValueById(id) {
-   const value = document.getElementById(id).value;
+   const value = parseFloat(document.getElementById(id).value);
    return value;
 }
