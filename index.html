@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quest-Build-and-Manipulate</title>
     <!-- daisy and tailwind link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,7 +35,7 @@
 </head>
 
 <body class="font-lexend">
-    <header class="bg-headerColor md:pt-6 md:pb-10 sm:mb-10 md:mb-14 lg:mb-20 sticky top-0 z-10 backdrop-blur bg-white/30">
+    <header class="bg-headerColor/70 md:pt-6 md:pb-10 sm:mb-10 md:mb-14 lg:mb-20 sticky top-0 z-10 backdrop-blur">
         <!-- navber -->
         <div class="navbar container mx-auto">
             <div class="navbar-start">
@@ -51,19 +51,21 @@
             <div class="navbar-end">
                 <a class="btn btn-ghost text-xl">
                     <img src="./assets/coin.png" alt="">
-                    <p class="text-pColor font-medium text-xl">5500 BDT</p>
+                    <p id="main-balance" class="text-pColor font-medium text-xl">5500</p><span
+                        class="text-pColor font-medium text-xl"> BDT</span>
                 </a>
             </div>
         </div>
     </header>
-    <main>
-        <section>
-            <!-- btn div -->
-            <div class="flex justify-center gap-4 mt-5">
-                <button class="btn bg-btnColor text-hColor sm:text-xs md:text-xl font-semibold">Donation</button>
-                <button class="btn">History</button>
-            </div>
-        </section>
+    <section class="">
+        <!-- btn div -->
+        <div class="flex justify-center gap-4 mt-5">
+            <button id="donation-tab"
+                class="btn bg-btnColor text-hColor sm:text-xs md:text-xl font-semibold">Donation</button>
+            <button id="history-tab" class="btn text-pColor font-medium sm:text-xs md:text-xl">History</button>
+        </div>
+    </section>
+    <main id="main">
         <!-- card section start -->
         <section class="container mx-auto mt-6 space-y-8 sm:mb-10 md:mb-14 lg:mb-20">
             <!-- card-1 -->
@@ -72,21 +74,19 @@
                     <img src="./assets/noakhali.png" alt="Album" />
                 </figure>
                 <div class="card-body">
-                    <!-- <div class="flex gap-2">
-                    <img src="./assets/coin.png" alt="">
-                    <p>0 BDT</p>
-                </div> -->
-                    <button class="btn bg-gray-200 w-[120px] inline-flex">
+                    <button class="btn bg-gray-200 w-[150px] inline-flex">
                         <img src="./assets/coin.png" alt="">
-                        <p class="text-pColor">0 BDT</p>
+                        <p id="first-card-donation-ammount" class="text-pColor">0</p><span>BDT</span>
                     </button>
                     <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
                     <p class="text-pColor"> The recent floods in Noakhali have caused significant damage to homes
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
                         disaster. Every contribution, big or small, makes difference. Please join us in supporting the
                         relief efforts and making a positive impact on the lives of those in need.</p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                    <button class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate Now</button>
+                    <input id="donate-input-one" type="text" placeholder="Write Donation Amount"
+                        class="input input-bordered w-full" />
+                    <button id="donate-now1" class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate
+                        Now</button>
                 </div>
             </div>
             <!-- card-2 -->
@@ -95,11 +95,7 @@
                     <img src="./assets/feni.png" alt="Album" />
                 </figure>
                 <div class="card-body">
-                    <!-- <div class="flex gap-2">
-                    <img src="./assets/coin.png" alt="">
-                    <p>0 BDT</p>
-                </div> -->
-                    <button class="btn bg-gray-200 w-[120px] inline-flex">
+                    <button class="btn bg-gray-200 w-[150px] inline-flex">
                         <img src="./assets/coin.png" alt="">
                         <p class="text-pColor">0 BDT</p>
                     </button>
@@ -118,11 +114,7 @@
                     <img src="./assets/quota-protest.png" alt="Album" />
                 </figure>
                 <div class="card-body">
-                    <!-- <div class="flex gap-2">
-                    <img src="./assets/coin.png" alt="">
-                    <p>0 BDT</p>
-                </div> -->
-                    <button class="btn bg-gray-200 w-[120px] inline-flex">
+                    <button class="btn bg-gray-200 w-[150px] inline-flex">
                         <img src="./assets/coin.png" alt="">
                         <p class="text-pColor">0 BDT</p>
                     </button>
@@ -136,12 +128,19 @@
                 </div>
             </div>
         </section>
+        <!-- card section end -->
+        <!-- history section start -->
+        <section id="history-section" class="hidden container mx-auto">
+
+        </section>
+        <!-- history section end -->
     </main>
 
-    <footer class="bg-headerColor sm:h-12 md:h-20">
+    <footer id="footer" class="bg-headerColor sm:h-12 md:h-20">
     </footer>
 
     <script src="./web.js"></script>
+    <script src="./function.js"></script>
 </body>
 
 </html>
