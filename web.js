@@ -57,14 +57,6 @@ document.getElementById('donate-now1').addEventListener('click', function () {
 
         const innerText = document.getElementById('main-balance').innerText = newMainBalance.toFixed(2);
 
-        // modal
-        const myModal = gettingElementById('my_modal_5');
-        myModal.showModal();
-
-        document.getElementById('close-btn').addEventListener('click', function () {
-            const myModal = getAtributeById('my_modal_5');
-            myModal.add('hidden')
-        })
 
         // history card
         const historySection = gettingElementById('history-section');
@@ -76,6 +68,15 @@ document.getElementById('donate-now1').addEventListener('click', function () {
         <p class='text-pColor'>Date : ${new Date()}
         `;
         historySection.insertBefore(div, historySection.firstChild);
+        
+        // modal
+        const myModal = gettingElementById('my_modal_5');
+        myModal.showModal();
+
+        document.getElementById('close-btn').addEventListener('click', function () {
+            const myModal = getAtributeById('my_modal_5');
+            myModal.close();
+        })
 
     } else {
         alert('Invalid Donation Ammount');
@@ -101,7 +102,7 @@ document.getElementById('donate-now2')
 
             document.getElementById('close-btn').addEventListener('click', function () {
                 const myModal = getAtributeById('my_modal_5');
-                myModal.add('hidden')
+                myModal.close();
             })
 
             // history card
@@ -138,7 +139,7 @@ document.getElementById('donate-nowBtn3').addEventListener('click', function () 
 
         document.getElementById('close-btn').addEventListener('click', function () {
             const myModal = getAtributeById('my_modal_5');
-            myModal.add('hidden')
+            myModal.close();
         })
 
         // history card
