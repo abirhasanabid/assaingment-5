@@ -90,7 +90,7 @@ document.getElementById('donate-now2')
         const mainBalance = getInnerTextById('main-balance');
         const donatedAmount = getInnerTextById('donated-amount')
 
-        if (typeof costAmmount === 'number' && costAmmount > 0 && costAmmount < mainBalance && isNaN() === true) {
+        if (typeof costAmmount === 'number' && costAmmount > 0 && costAmmount < mainBalance) {
             const balance = mainBalance - costAmmount;
             document.getElementById('main-balance').innerText = balance.toFixed(2);
             document.getElementById('donated-amount').innerText = (costAmmount + donatedAmount).toFixed(2);

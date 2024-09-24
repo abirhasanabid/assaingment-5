@@ -34,8 +34,8 @@
 
 </head>
 
-<body class="font-lexend">
-    <header id="header" class="bg-headerColor/70 md:pt-6  sm:mb-10 md:mb-14 lg:mb-20 sticky top-0 z-10 backdrop-blur">
+<body class="font-lexend sm:mx-4 md:mx-auto">
+    <header id="header" class="bg-headerColor/40 backdrop-blur md:pt-4 sm:mb-10 md:mb-14 lg:mb-20 sticky top-0 z-10 shadow-lg">
         <!-- navber -->
         <div class="navbar container mx-auto">
             <div class="navbar-start">
@@ -56,25 +56,23 @@
                 </a>
             </div>
         </div>
-        <section class="bg-white/85 backdrop-blur py-3">
-            <!-- btn div -->
-            <div class="flex justify-center gap-4 mt-5 items-center ">
-                <button id="donation-tab"
-                    class="btn bg-btnColor text-hColor sm:text-xs md:text-xl font-semibold">Donation</button>
-                <button id="history-tab" class="btn text-pColor font-medium sm:text-xs md:text-xl">History</button>
-            </div>
-        </section>
+         <!-- btn div -->
+         <div class="flex justify-center gap-4 py-3  items-center ">
+            <button id="donation-tab"
+                class="btn bg-btnColor text-hColor sm:text-xs md:text-xl font-semibold">Donation</button>
+            <button id="history-tab" class="btn text-pColor font-medium sm:text-xs md:text-xl">History</button>
+        </div>
     </header>
 
     <main id="main">
         <!-- card section start -->
         <section class="container mx-auto mt-6 space-y-8 sm:mb-10 md:mb-14 lg:mb-20">
             <!-- card-1 -->
-            <div class="card lg:card-side bg-base-100 shadow-sm p-8 border-2 border-gray-200">
-                <figure class="w-3/4">
+            <div class="card lg:card-side bg-base-100 shadow-sm md:p-8 border-2 border-gray-200">
+                <figure class="md:w-3/4 p-2">
                     <img src="./assets/noakhali.png" alt="Album" />
                 </figure>
-                <div class="card-body">
+                <div class="card-body md:p-8">
                     <button class="btn bg-gray-200 w-[200px] inline-flex">
                         <img src="./assets/coin.png" alt="">
                         <p id="first-card-donation-ammount" class="text-pColor">0</p><span>BDT</span>
@@ -84,18 +82,18 @@
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
                         disaster. Every contribution, big or small, makes difference. Please join us in supporting the
                         relief efforts and making a positive impact on the lives of those in need.</p>
-                    <input id="donate-input-one" type="text" placeholder="Write Donation Amount"
+                    <input id="donate-input-one" type="number" placeholder="Write Donation Amount"
                         class="input input-bordered w-full" />
-                    <button id="donate-now1" class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate
+                    <button id="donate-now1" class="btn btn-block bg-btnColor text-hColor font-semibold md:text-xl">Donate
                         Now</button>
                 </div>
             </div>
             <!-- card-2 -->
-            <div class="card lg:card-side bg-base-100 shadow-sm p-8 border-2 border-gray-200">
-                <figure class="w-3/4">
+            <div class="card lg:card-side bg-base-100 shadow-sm md:p-8 border-2 border-gray-200">
+                <figure class="md:w-3/4 p-2">
                     <img src="./assets/feni.png" alt="Album" />
                 </figure>
-                <div class="card-body">
+                <div class="card-body md:p-8">
                     <button class="btn bg-gray-200 w-[200px] inline-flex">
                         <img src="./assets/coin.png" alt="">
                         <p id="donated-amount" class="text-pColor">0</p><span>BDT</span>
@@ -105,18 +103,18 @@
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
                         disaster. Every contribution, big or small, makes difference. Please join us in supporting the
                         relief efforts and making a positive impact on the lives of those in need.</p>
-                    <input id="card2-input" type="text" placeholder="Write Donation Amount"
+                    <input id="card2-input" type="number" placeholder="Write Donation Amount"
                         class="input input-bordered w-full" />
-                    <button id="donate-now2" class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate
+                    <button id="donate-now2" class="btn btn-block bg-btnColor text-hColor font-semibold md:text-xl">Donate
                         Now</button>
                 </div>
             </div>
             <!-- card-3 -->
-            <div class="card lg:card-side bg-base-100 shadow-sm p-8 border-2 border-gray-200">
-                <figure class="w-3/4">
+            <div class="card lg:card-side bg-base-100 shadow-sm md:p-8 border-2 border-gray-200">
+                <figure class="md:w-3/4 p-2">
                     <img src="./assets/quota-protest.png" alt="Album" />
                 </figure>
-                <div class="card-body">
+                <div class="card-body md:p-8">
                     <button class="btn bg-gray-200 w-[200px] inline-flex">
                         <img src="./assets/coin.png" alt="">
                         <p id="showig-costAmount" class="text-pColor">0</p><span>BDT</span>
@@ -126,10 +124,10 @@
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
                         disaster. Every contribution, big or small, makes difference. Please join us in supporting the
                         relief efforts and making a positive impact on the lives of those in need.</p>
-                    <input id="input-costAmmount" type="text" placeholder="Write Donation Amount"
+                    <input id="input-costAmmount" type="number" placeholder="Write Donation Amount"
                         class="input input-bordered w-full" />
                     <button id="donate-nowBtn3"
-                        class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate Now</button>
+                        class="btn btn-block bg-btnColor text-hColor font-semibold md:text-xl">Donate Now</button>
                 </div>
             </div>
         </section>
@@ -138,12 +136,15 @@
         <!-- modal -->
         <section>
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                    <h3 class="text-lg font-bold">Congrates!</h3>
+                <div class="modal-box text-center">
+                    <h3 class="text-3xl font-bold pb-7">Congrates!</h3>
+                    <img class="w-12 mx-auto" src="./assets/coin.png" alt="">
                     <p class="py-4">You Have Donated For Human Kind</p>
-                    <p class="py-4 font-semibold">Successfully</p>
-                    <div class="modal-action">
-                        <button id="close-btn" class="btn">Close</button>
+                    <p class="py-4 font-bold">Successfully</p>
+                    <div class="modal-action flex justify-center">
+                        <form method="dialog">
+                     <button id="close-btn" class="btn ">Close confirmation</button>
+                    </form>
                     </div>
                 </div>
             </dialog>
