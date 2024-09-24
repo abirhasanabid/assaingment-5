@@ -35,11 +35,11 @@
 </head>
 
 <body class="font-lexend">
-    <header class="bg-headerColor/70 md:pt-6 md:pb-10 sm:mb-10 md:mb-14 lg:mb-20 sticky top-0 z-10 backdrop-blur">
+    <header id="header" class="bg-headerColor/70 md:pt-6  sm:mb-10 md:mb-14 lg:mb-20 sticky top-0 z-10 backdrop-blur">
         <!-- navber -->
         <div class="navbar container mx-auto">
             <div class="navbar-start">
-                <a class="btn bg-btnColor text-hColor font-semibold text-xl">Button</a>
+                <a id="blog-id" class="btn bg-btnColor text-hColor font-semibold text-xl">Blog</a>
 
             </div>
             <div class="navbar-center hidden lg:flex">
@@ -56,15 +56,16 @@
                 </a>
             </div>
         </div>
+        <section class="bg-white/85 backdrop-blur py-3">
+            <!-- btn div -->
+            <div class="flex justify-center gap-4 mt-5 items-center ">
+                <button id="donation-tab"
+                    class="btn bg-btnColor text-hColor sm:text-xs md:text-xl font-semibold">Donation</button>
+                <button id="history-tab" class="btn text-pColor font-medium sm:text-xs md:text-xl">History</button>
+            </div>
+        </section>
     </header>
-    <section class="">
-        <!-- btn div -->
-        <div class="flex justify-center gap-4 mt-5">
-            <button id="donation-tab"
-                class="btn bg-btnColor text-hColor sm:text-xs md:text-xl font-semibold">Donation</button>
-            <button id="history-tab" class="btn text-pColor font-medium sm:text-xs md:text-xl">History</button>
-        </div>
-    </section>
+    
     <main id="main">
         <!-- card section start -->
         <section class="container mx-auto mt-6 space-y-8 sm:mb-10 md:mb-14 lg:mb-20">
@@ -116,15 +117,15 @@
                 <div class="card-body">
                     <button class="btn bg-gray-200 w-[150px] inline-flex">
                         <img src="./assets/coin.png" alt="">
-                        <p class="text-pColor">0 BDT</p>
+                        <p id="showig-costAmount" class="text-pColor">0</p><span>BDT</span>
                     </button>
                     <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
                     <p class="text-pColor"> The recent floods in Noakhali have caused significant damage to homes
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
                         disaster. Every contribution, big or small, makes difference. Please join us in supporting the
                         relief efforts and making a positive impact on the lives of those in need.</p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                    <button class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate Now</button>
+                    <input id="input-costAmmount" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <button id="donate-nowBtn3" class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate Now</button>
                 </div>
             </div>
         </section>

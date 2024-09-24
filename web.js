@@ -1,3 +1,10 @@
+// blog
+document.getElementById('blog-id').addEventListener('click',function(){
+window.location.href = './blog.html';
+
+
+})
+
 // history tab btn
 document.getElementById('history-tab').addEventListener('click', function () {
     const donationTab = getAtributeById('donation-tab');
@@ -31,6 +38,9 @@ document.getElementById('donation-tab').addEventListener('click', function () {
     getAtributeById('footer').remove('hidden');
 
     // history card
+    const historySection = getAtributeById('history-section');
+    historySection.add('hidden');
+
 
 });
 
@@ -90,5 +100,34 @@ document.getElementById('donate-now2')
 
         }
     });
-    
+
 // btn-3
+
+document.getElementById('donate-nowBtn3').addEventListener('click', function () {
+    const inputCostAmmount = getInputValueById('input-costAmmount');
+
+    const mainBalance = getInnerTextById('main-balance');
+
+    if (typeof inputCostAmmount === 'number' && inputCostAmmount > 0 && inputCostAmmount < mainBalance) {
+        document.getElementById('showig-costAmount').innerText = inputCostAmmount;
+
+        const newMainBalance = mainBalance - inputCostAmmount;
+
+        document.getElementById('main-balance').innerText = newMainBalance;
+
+        // history card
+        const historySection = gettingElementById('history-section');
+        const div = document.createElement('div');
+        div.className = 'border-2 border-gray-100 rounded-lg shadow-lg p-5 space-y-3';
+
+        div.innerHTML = `
+        <p class='text-xl font-semibold text-hColor'>${inputCostAmmount} Donate for Aid for Injured in the Quota Movement</p>
+        <p class='text-pColor'>Date : ${new Date()}
+        `;
+        historySection.insertBefore(div, historySection.firstChild);
+    }else {
+        alert('Invalid Donation Ammount');
+
+    }
+
+})
