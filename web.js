@@ -1,6 +1,6 @@
 // blog
-document.getElementById('blog-id').addEventListener('click',function(){
-window.location.href = './blog.html';
+document.getElementById('blog-id').addEventListener('click', function () {
+    window.location.href = './blog.html';
 
 
 })
@@ -46,16 +46,25 @@ document.getElementById('donation-tab').addEventListener('click', function () {
 
 // submit donate btn {btn-1}
 document.getElementById('donate-now1').addEventListener('click', function () {
-    const costAmmount = parseFloat(getInputValueById('donate-input-one'));
-    const mainBalance = parseFloat(getInnerTextById('main-balance'));
-    const firstCardDonationAmmount = parseFloat(getInnerTextById('first-card-donation-ammount'));
+    const costAmmount = getInputValueById('donate-input-one');
+    const mainBalance = getInnerTextById('main-balance');
+    const firstCardDonationAmmount = getInnerTextById('first-card-donation-ammount');
 
     if (typeof costAmmount === 'number' && costAmmount > 0 && costAmmount < mainBalance) {
 
         const newMainBalance = mainBalance - costAmmount;
-        document.getElementById('first-card-donation-ammount').innerText = costAmmount;
+        document.getElementById('first-card-donation-ammount').innerText = (costAmmount + firstCardDonationAmmount).toFixed(2);
 
-        const innerText = document.getElementById('main-balance').innerText = newMainBalance;
+        const innerText = document.getElementById('main-balance').innerText = newMainBalance.toFixed(2);
+
+        // modal
+        const myModal = gettingElementById('my_modal_5');
+        myModal.showModal();
+
+        document.getElementById('close-btn').addEventListener('click', function () {
+            const myModal = getAtributeById('my_modal_5');
+            myModal.add('hidden')
+        })
 
         // history card
         const historySection = gettingElementById('history-section');
@@ -78,12 +87,22 @@ document.getElementById('donate-now1').addEventListener('click', function () {
 document.getElementById('donate-now2')
     .addEventListener('click', function () {
         const costAmmount = getInputValueById('card2-input');
-        const mainBalance = parseFloat(getInnerTextById('main-balance'));
+        const mainBalance = getInnerTextById('main-balance');
+        const donatedAmount = getInnerTextById('donated-amount')
 
-        if (typeof costAmmount === 'number' && costAmmount > 0 && costAmmount < mainBalance) {
+        if (typeof costAmmount === 'number' && costAmmount > 0 && costAmmount < mainBalance && isNaN() === true) {
             const balance = mainBalance - costAmmount;
-            document.getElementById('main-balance').innerText = balance;
-            document.getElementById('donated-amount').innerText = costAmmount;
+            document.getElementById('main-balance').innerText = balance.toFixed(2);
+            document.getElementById('donated-amount').innerText = (costAmmount + donatedAmount).toFixed(2);
+
+            // modal
+            const myModal = gettingElementById('my_modal_5');
+            myModal.showModal();
+
+            document.getElementById('close-btn').addEventListener('click', function () {
+                const myModal = getAtributeById('my_modal_5');
+                myModal.add('hidden')
+            })
 
             // history card
             const historySection = gettingElementById('history-section');
@@ -102,18 +121,25 @@ document.getElementById('donate-now2')
     });
 
 // btn-3
-
 document.getElementById('donate-nowBtn3').addEventListener('click', function () {
     const inputCostAmmount = getInputValueById('input-costAmmount');
-
     const mainBalance = getInnerTextById('main-balance');
+    const showigCostAmount = getInnerTextById('showig-costAmount');
 
     if (typeof inputCostAmmount === 'number' && inputCostAmmount > 0 && inputCostAmmount < mainBalance) {
-        document.getElementById('showig-costAmount').innerText = inputCostAmmount;
 
         const newMainBalance = mainBalance - inputCostAmmount;
+        document.getElementById('main-balance').innerText = newMainBalance.toFixed(2);
+        document.getElementById('showig-costAmount').innerText = (inputCostAmmount + showigCostAmount).toFixed(2);
 
-        document.getElementById('main-balance').innerText = newMainBalance;
+        // modal
+        const myModal = gettingElementById('my_modal_5');
+        myModal.showModal();
+
+        document.getElementById('close-btn').addEventListener('click', function () {
+            const myModal = getAtributeById('my_modal_5');
+            myModal.add('hidden')
+        })
 
         // history card
         const historySection = gettingElementById('history-section');
@@ -125,9 +151,8 @@ document.getElementById('donate-nowBtn3').addEventListener('click', function () 
         <p class='text-pColor'>Date : ${new Date()}
         `;
         historySection.insertBefore(div, historySection.firstChild);
-    }else {
+    } else {
         alert('Invalid Donation Ammount');
 
     }
-
 })

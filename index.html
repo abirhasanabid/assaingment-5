@@ -65,7 +65,7 @@
             </div>
         </section>
     </header>
-    
+
     <main id="main">
         <!-- card section start -->
         <section class="container mx-auto mt-6 space-y-8 sm:mb-10 md:mb-14 lg:mb-20">
@@ -75,7 +75,7 @@
                     <img src="./assets/noakhali.png" alt="Album" />
                 </figure>
                 <div class="card-body">
-                    <button class="btn bg-gray-200 w-[150px] inline-flex">
+                    <button class="btn bg-gray-200 w-[200px] inline-flex">
                         <img src="./assets/coin.png" alt="">
                         <p id="first-card-donation-ammount" class="text-pColor">0</p><span>BDT</span>
                     </button>
@@ -96,7 +96,7 @@
                     <img src="./assets/feni.png" alt="Album" />
                 </figure>
                 <div class="card-body">
-                    <button class="btn bg-gray-200 w-[150px] inline-flex">
+                    <button class="btn bg-gray-200 w-[200px] inline-flex">
                         <img src="./assets/coin.png" alt="">
                         <p id="donated-amount" class="text-pColor">0</p><span>BDT</span>
                     </button>
@@ -105,8 +105,10 @@
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
                         disaster. Every contribution, big or small, makes difference. Please join us in supporting the
                         relief efforts and making a positive impact on the lives of those in need.</p>
-                    <input id="card2-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                    <button id="donate-now2" class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate Now</button>
+                    <input id="card2-input" type="text" placeholder="Write Donation Amount"
+                        class="input input-bordered w-full" />
+                    <button id="donate-now2" class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate
+                        Now</button>
                 </div>
             </div>
             <!-- card-3 -->
@@ -115,7 +117,7 @@
                     <img src="./assets/quota-protest.png" alt="Album" />
                 </figure>
                 <div class="card-body">
-                    <button class="btn bg-gray-200 w-[150px] inline-flex">
+                    <button class="btn bg-gray-200 w-[200px] inline-flex">
                         <img src="./assets/coin.png" alt="">
                         <p id="showig-costAmount" class="text-pColor">0</p><span>BDT</span>
                     </button>
@@ -124,12 +126,28 @@
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
                         disaster. Every contribution, big or small, makes difference. Please join us in supporting the
                         relief efforts and making a positive impact on the lives of those in need.</p>
-                    <input id="input-costAmmount" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                    <button id="donate-nowBtn3" class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate Now</button>
+                    <input id="input-costAmmount" type="text" placeholder="Write Donation Amount"
+                        class="input input-bordered w-full" />
+                    <button id="donate-nowBtn3"
+                        class="btn btn-block bg-btnColor text-hColor font-semibold text-xl">Donate Now</button>
                 </div>
             </div>
         </section>
         <!-- card section end -->
+
+        <!-- modal -->
+        <section>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <h3 class="text-lg font-bold">Congrates!</h3>
+                    <p class="py-4">You Have Donated For Human Kind</p>
+                    <p class="py-4 font-semibold">Successfully</p>
+                    <div class="modal-action">
+                        <button id="close-btn" class="btn">Close</button>
+                    </div>
+                </div>
+            </dialog>
+        </section>
     </main>
     <section id="history-section" class="hidden container mx-auto mt-6 space-y-4">
 
